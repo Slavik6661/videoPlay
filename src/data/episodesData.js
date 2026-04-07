@@ -75,7 +75,7 @@ export const episodesData = {
   },
   season3: {
     seasonNumber: 3,
-    episodeCount: 10,
+    episodeCount: 12,
     episodes: [
       {
         id: `1`,
