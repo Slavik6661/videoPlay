@@ -15,13 +15,13 @@ export default function VideoPlayer({ episode, onClose, onWatched }) {
     setIsLoading(false);
   };
 
-  const getEmbedUrl = () => {
-    if (currentSource === "vk") {
-      return episode.vkUrl;
-    } else {
-      return episode.rutubeUrl;
-    }
-  };
+  // const getEmbedUrl = () => {
+  //   if (currentSource === "vk") {
+  //     return episode.vkUrl;
+  //   } else {
+  //     return episode.rutubeUrl;
+  //   }
+  // };
 
   // Проверяем доступность видео и показываем сообщение если ссылка имеет плейсхолдер формат
   const isPlaceholder = episode.vkUrl.includes("456239175");
@@ -40,10 +40,10 @@ export default function VideoPlayer({ episode, onClose, onWatched }) {
           <p className="text-gray-400">{episode.description}</p>
         </div>
 
-        <SourceSwitcher
+        {/* <SourceSwitcher
           currentSource={currentSource}
           onSourceChange={setCurrentSource}
-        />
+        /> */}
 
         <div
           className="relative bg-black rounded-lg overflow-hidden mb-4"
@@ -69,7 +69,7 @@ export default function VideoPlayer({ episode, onClose, onWatched }) {
             </div>
           ) : (
             <iframe
-              src={getEmbedUrl()}
+              src={episode.vkUrl}
               frameBorder="0"
               allowFullScreen
               allow="autoplay; encrypted-media"

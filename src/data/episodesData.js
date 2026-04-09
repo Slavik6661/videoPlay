@@ -1,35 +1,10 @@
-export const generateEpisodeUrl = (season, episode) => {
-  // Генерируем условные ссылки на видео
-  // В реальном приложении здесь были бы реальные ID из VK и Rutube
-  return {
-    id: `S${season}E${episode}`,
-    title: `Серия ${episode}`,
-    description: `Сезон ${season}, серия ${episode}`,
-    vkUrl: `https://vk.com/video_ext.php?oid=-229354135&id=${456239175 + season * 1000 + episode}&hd=2`,
-    rutubeUrl: `https://rutube.ru/play/embed/${generateRutubeId(season, episode)}`,
-    isWatched: false,
-  };
-};
-
-// Генерируем ID для Rutube (хеш-подобные строки)
-const generateRutubeId = (season, episode) => {
-  const chars = "abcdef0123456789";
-  let result = "";
-  const seed = season * 100 + episode;
-
-  for (let i = 0; i < 24; i++) {
-    result += chars[Math.floor(Math.random() * chars.length)];
-  }
-  return result;
-};
-
 export const episodesData = {
   season1: {
     seasonNumber: 1,
     episodeCount: 2,
     episodes: [
       {
-        id: `1`,
+        id: `S1E1`,
         title: `Серия ${1}`,
         description: `Сезон ${1}, серия ${1}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-194455959&id=456241710&hd=4`,
@@ -39,7 +14,7 @@ export const episodesData = {
       },
 
       {
-        id: `2`,
+        id: `S1E2`,
         title: `Серия ${2}`,
         description: `Сезон ${1}, серия ${2}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-80669546&id=456256152&hd=3`,
@@ -54,7 +29,7 @@ export const episodesData = {
     episodeCount: 12,
     episodes: [
       {
-        id: `1`,
+        id: `S2E1`,
         title: `Серия ${1}`,
         description: `Сезон ${2}, серия ${1}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239035&hd=4`,
@@ -63,7 +38,7 @@ export const episodesData = {
       },
 
       {
-        id: `2`,
+        id: `S2E2`,
         title: `Серия ${2}`,
         description: `Сезон ${2}, серия ${2}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-229262474&id=456239020&hd=4`,
@@ -78,7 +53,7 @@ export const episodesData = {
     episodeCount: 12,
     episodes: [
       {
-        id: `1`,
+        id: `S3E1`,
         title: `Серия ${1}`,
         description: `Сезон ${3}, серия ${1}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239038&hd=4`,
@@ -86,7 +61,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `2`,
+        id: `S3E2`,
         title: `Серия ${2}`,
         description: `Сезон ${3}, серия ${2}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-229262474&id=456239022&hd=4`,
@@ -94,7 +69,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `3`,
+        id: `S3E3`,
         title: `Серия ${3}`,
         description: `Сезон ${3}, серия ${3}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239076&hd=3`,
@@ -102,7 +77,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `4`,
+        id: `S3E4`,
         title: `Серия ${4}`,
         description: `Сезон ${3}, серия ${4}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-220521189&id=456239138&hd=4`,
@@ -110,7 +85,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `5`,
+        id: `S3E5`,
         title: `Серия ${5}`,
         description: `Сезон ${3}, серия ${5}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239079&hd=4`,
@@ -118,7 +93,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `6`,
+        id: `S3E6`,
         title: `Серия ${6}`,
         description: `Сезон ${3}, серия ${6}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239080&hd=4`,
@@ -126,7 +101,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `7`,
+        id: `S3E7`,
         title: `Серия ${7}`,
         description: `Сезон ${3}, серия ${7}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239080&hd=4`,
@@ -134,7 +109,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `8`,
+        id: `S3E8`,
         title: `Серия ${8}`,
         description: `Сезон ${3}, серия ${8}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-230357266&id=456239389&hd=3`,
@@ -142,7 +117,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `9`,
+        id: `S3E9`,
         title: `Серия ${9}`,
         description: `Сезон ${3}, серия ${9}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239084&hd=4`,
@@ -150,7 +125,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `10`,
+        id: `S3E10`,
         title: `Серия ${10}`,
         description: `Сезон ${3}, серия ${10}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239085&hd=4`,
@@ -158,7 +133,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `11`,
+        id: `S3E11`,
         title: `Серия ${11}`,
         description: `Сезон ${3}, серия ${11}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239086&hd=4`,
@@ -166,7 +141,7 @@ export const episodesData = {
         isWatched: false,
       },
       {
-        id: `12`,
+        id: `S3E12`,
         title: `Серия ${12}`,
         description: `Сезон ${3}, серия ${12}`,
         vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239057&hd=4`,
@@ -177,25 +152,123 @@ export const episodesData = {
   },
   season4: {
     seasonNumber: 4,
-    episodeCount: 14,
+    episodeCount: 16,
     episodes: [
       {
-        id: `1`,
+        id: `S4E1`,
         title: `Серия ${1}`,
-        description: `Сезон ${1}, серия ${1}`,
-        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-194455959&id=456241710&hd=4`,
-
-        rutubeUrl: ``,
+        description: `Сезон ${4}, серия ${1}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239061&hd=4`,
         isWatched: false,
       },
 
       {
-        id: `2`,
+        id: `S4E2`,
         title: `Серия ${2}`,
-        description: `Сезон ${1}, серия ${2}`,
-        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-80669546&id=456256152&hd=3`,
+        description: `Сезон ${4}, серия ${2}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239062&hd=4`,
+        isWatched: false,
+      },
 
-        rutubeUrl: ``,
+      {
+        id: `S4E3`,
+        title: `Серия ${3}`,
+        description: `Сезон ${4}, серия ${3}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239066&hd=4`,
+        isWatched: false,
+      },
+
+      {
+        id: `S4E4`,
+        title: `Серия ${4}`,
+        description: `Сезон ${4}, серия ${4}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239067&hd=4`,
+        isWatched: false,
+      },
+
+      {
+        id: `S4E5`,
+        title: `Серия ${5}`,
+        description: `Сезон ${4}, серия ${5}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239093&hd=4`,
+        isWatched: false,
+      },
+
+      {
+        id: `S4E6`,
+        title: `Серия ${6}`,
+        description: `Сезон ${4}, серия ${6}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239071&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E7`,
+        title: `Серия ${7}`,
+        description: `Сезон ${4}, серия ${7}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239072&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E8`,
+        title: `Серия ${8}`,
+        description: `Сезон ${4}, серия ${8}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239096&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E9`,
+        title: `Серия ${9}`,
+        description: `Сезон ${4}, серия ${9}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239074&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E10`,
+        title: `Серия ${10}`,
+        description: `Сезон ${4}, серия ${10}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239075&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E11`,
+        title: `Серия ${11}`,
+        description: `Сезон ${4}, серия ${11}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239076&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E12`,
+        title: `Серия ${12}`,
+        description: `Сезон ${4}, серия ${12}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239100&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E13`,
+        title: `Серия ${13}`,
+        description: `Сезон ${4}, серия ${13}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239078&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E14`,
+        title: `Серия ${14}`,
+        description: `Сезон ${4}, серия ${14}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239079&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E15`,
+        title: `Серия ${15}`,
+        description: `Сезон ${4}, серия ${15}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239088&hd=4`,
+        isWatched: false,
+      },
+      {
+        id: `S4E16`,
+        title: `Серия ${16}`,
+        description: `Сезон ${4}, серия ${16}`,
+        vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239089&hd=4`,
         isWatched: false,
       },
     ],
@@ -308,10 +381,10 @@ export const getAllSeasons = () => {
     episodesData.season2,
     episodesData.season3,
     episodesData.season4,
-    episodesData.season5,
-    episodesData.season6,
-    episodesData.season7,
-    episodesData.season8,
+    // episodesData.season5,
+    // episodesData.season6,
+    // episodesData.season7,
+    // episodesData.season8,
   ];
 };
 

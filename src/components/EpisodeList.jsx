@@ -6,8 +6,6 @@ export default function EpisodeList({
   onSelectEpisode,
   watchedEpisodes,
 }) {
-  console.log("episodes", episodes);
-
   return (
     <div className="mb-8">
       <h3 className="text-xl font-bold mb-4 text-white">Серии</h3>
