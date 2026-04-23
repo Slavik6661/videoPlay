@@ -283,7 +283,7 @@ export const seriesData = [
     },
     season5: {
       seasonNumber: 5,
-      episodeCount: 12,
+      episodeCount: 16,
       episodes: [
         {
           id: `S5E1`,
