@@ -145,15 +145,30 @@ const SeriesPage = ({ seriesId, onBackHome }) => {
         <h1 className="text-3xl font-bold text-white">{series.name}</h1>
       </div>
 
-      <div>
-        <img src="" alt="" />
+      <div className="flex flex-col md:flex-row items-start xl:items-start md:items-start gap-6 mb-8">
+        <div>
+          <img
+            src={seasons[selectedSeason - 1].img}
+            alt={series.name}
+            className="rounded-md min-w-[300px] h-[500px] object-cover object-top shadow-lg"
+          />
+        </div>
+        <div className="">
+          <SeasonSelector
+            seasons={seasons}
+            selectedSeason={selectedSeason}
+            onSelectSeason={handleSelectSeason}
+          />
+          <div className="overflow-auto h-[330px]">
+            <EpisodeList
+              episodes={currentEpisodes}
+              selectedEpisode={selectedEpisode}
+              onSelectEpisode={handleSelectEpisode}
+              watchedEpisodes={watchedEpisodes}
+            />
+          </div>
+        </div>
       </div>
-
-      <SeasonSelector
-        seasons={seasons}
-        selectedSeason={selectedSeason}
-        onSelectSeason={handleSelectSeason}
-      />
 
       {currentSeason && (
         <div className="mb-6 rounded-lg border border-gray-700 bg-gray-800 p-4">
@@ -188,13 +203,6 @@ const SeriesPage = ({ seriesId, onBackHome }) => {
           onWatched={handleMarkAsWatched}
         />
       )}
-
-      <EpisodeList
-        episodes={currentEpisodes}
-        selectedEpisode={selectedEpisode}
-        onSelectEpisode={handleSelectEpisode}
-        watchedEpisodes={watchedEpisodes}
-      />
     </main>
   );
 };

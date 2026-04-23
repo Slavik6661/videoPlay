@@ -2,6 +2,9 @@ export const seriesData = [
   {
     id: "matchmakers",
     name: "Сваты",
+    years: "2008-2021",
+    description:
+      "Комедийный сериал о двух семьях, которые вместе помогают воспитывать внуков.",
     img: "/images/i.webp",
     season1: {
       seasonNumber: 1,
@@ -284,6 +287,7 @@ export const seriesData = [
     season5: {
       seasonNumber: 5,
       episodeCount: 16,
+      img: "/images/svat-5.jpg",
       episodes: [
         {
           id: `S5E1`,

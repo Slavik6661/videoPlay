@@ -32,10 +32,10 @@ body {
     @apply opacity-60;
 }
 
-.episode-card.watched::after {
+/* .episode-card.watched::after {
     content: '✓';
     @apply text-green-400 font-bold text-lg ml-2;
-}
+} */
 
 .video-container {
     @apply w-full bg-black rounded-lg overflow-hidden shadow-2xl;
@@ -72,10 +72,20 @@ iframe {
 
 @media (max-width: 768px) {
     .modal-content {
-        @apply w-full h-screen rounded-none;
+        @apply w-full h-auto rounded-md;
     }
 
     .container-app {
-        @apply px-2;
+        @apply px-4;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        @apply w-full mx-4 p-4 h-auto rounded-md;
+    }
+
+    .container-app {
+        @apply px-4;
     }
 }

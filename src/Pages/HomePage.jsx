@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { seriesData } from "../data/episodesData";
 
 const HomePage = ({ onOpenSeries }) => {
   const series = seriesData;
-  console.log(series);
 
   return (
     <main>
@@ -22,6 +21,12 @@ const HomePage = ({ onOpenSeries }) => {
             />
             <div className="p-4">
               <h2 className="text-xl font-bold text-white">{item.name}</h2>
+              <p className="mt-1 text-sm font-medium text-gray-300">
+                {item.years}
+              </p>
+              <p className="mt-2 text-sm leading-5 text-gray-400">
+                {item.description}
+              </p>
             </div>
           </div>
         ))}
