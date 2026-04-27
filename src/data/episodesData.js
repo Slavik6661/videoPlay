@@ -480,12 +480,28 @@ export const seriesData = [
       ],
     },
   },
+  {
+    id: "All inclusive",
+    name: "Все включено",
+    type: "film",
+    years: "2011",
+    description: "Комедийный сериал.",
+    img: "/images/all-inclusive.webp",
+    vkUrl: `https://vkvideo.ru/video_ext.php?oid=-53242335&id=456241791&hd=1`,
+  },
 ];
 
 export const getAllSeries = () => seriesData;
 
 export const getSeriesById = (seriesId) => {
   return seriesData.find((series) => series.id === seriesId) || null;
+};
+
+export const getFilmById = (filmId) => {
+  return (
+    seriesData.find((item) => item.id === filmId && item.type === "film") ||
+    null
+  );
 };
 
 export const getAllSeasons = (seriesId) => {

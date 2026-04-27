@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import HomePage from "./Pages/HomePage";
+import FilmPayer from "./Pages/FilmPayer";
 import SeriesPage from "./Pages/SeriesPage";
 import "./index.css";
 
@@ -12,12 +13,22 @@ const getRouteState = () => {
     return {
       page: "series",
       seriesId: decodeURIComponent(segments[1]),
+      filmId: null,
+    };
+  }
+
+  if (segments[0] === "film" && segments[1]) {
+    return {
+      page: "film",
+      seriesId: null,
+      filmId: decodeURIComponent(segments[1]),
     };
   }
 
   return {
     page: "home",
     seriesId: null,
+    filmId: null,
   };
 };
 
@@ -49,8 +60,13 @@ function App() {
           seriesId={route.seriesId}
           onBackHome={() => navigateTo("/")}
         />
+      ) : route.page === "film" ? (
+        <FilmPayer filmId={route.filmId} onBackHome={() => navigateTo("/")} />
       ) : (
-        <HomePage onOpenSeries={(seriesId) => navigateTo(`/series/${seriesId}`)} />
+        <HomePage
+          onOpenSeries={(seriesId) => navigateTo(`/series/${seriesId}`)}
+          onOpenFilm={(filmId) => navigateTo(`/film/${filmId}`)}
+        />
       )}
     </div>
   );

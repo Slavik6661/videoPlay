@@ -1,8 +1,17 @@
 import React from "react";
 import { seriesData } from "../data/episodesData";
 
-const HomePage = ({ onOpenSeries }) => {
+const HomePage = ({ onOpenSeries, onOpenFilm }) => {
   const series = seriesData;
+
+  const handleOpenItem = (item) => {
+    if (item.type === "film") {
+      onOpenFilm(item.id);
+      return;
+    }
+
+    onOpenSeries(item.id);
+  };
 
   return (
     <main>
@@ -11,8 +20,8 @@ const HomePage = ({ onOpenSeries }) => {
         {series.map((item) => (
           <div
             key={item.name}
-            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden opacity-100 hover:cursor-pointer hover:opacity-50 transition-opacity duration-300"
-            onClick={() => onOpenSeries(item.id)}
+            className="h-fit bg-gray-800 rounded-lg shadow-lg overflow-hidden opacity-100 hover:cursor-pointer hover:opacity-50 transition-opacity duration-300"
+            onClick={() => handleOpenItem(item)}
           >
             <img
               src={item.img}
