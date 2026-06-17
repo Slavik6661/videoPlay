@@ -406,25 +406,120 @@ export const seriesData = [
     },
     season6: {
       seasonNumber: 6,
-      episodeCount: 13,
+      episodeCount: 16,
+      img: "/images/svat-6.webp",
       episodes: [
         {
-          id: `1`,
+          id: `S6E1`,
           title: `Серия ${1}`,
           description: `Сезон ${1}, серия ${1}`,
-          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-194455959&id=456241710&hd=4`,
-
-          rutubeUrl: ``,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239118&hd=4`,
           isWatched: false,
         },
 
         {
-          id: `2`,
+          id: `S6E2`,
           title: `Серия ${2}`,
           description: `Сезон ${1}, серия ${2}`,
-          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-80669546&id=456256152&hd=3`,
-
-          rutubeUrl: ``,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239120&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E3`,
+          title: `Серия ${3}`,
+          description: `Сезон ${6}, серия ${3}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239129&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E4`,
+          title: `Серия ${4}`,
+          description: `Сезон ${6}, серия ${4}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239122&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E5`,
+          title: `Серия ${5}`,
+          description: `Сезон ${6}, серия ${5}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239122&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E6`,
+          title: `Серия ${6}`,
+          description: `Сезон ${6}, серия ${6}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-219966194&id=456239255&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E7`,
+          title: `Серия ${7}`,
+          description: `Сезон ${6}, серия ${7}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239125&hd=4"`,
+          isWatched: false,
+        },
+        {
+          id: `S6E8`,
+          title: `Серия ${8}`,
+          description: `Сезон ${6}, серия ${8}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-79337779&id=456247699&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E9`,
+          title: `Серия ${9}`,
+          description: `Сезон ${6}, серия ${9}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-136020824&id=456253269&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E10`,
+          title: `Серия ${10}`,
+          description: `Сезон ${6}, серия ${10}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-136020824&id=456253269&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E11`,
+          title: `Серия ${11}`,
+          description: `Сезон ${6}, серия ${11}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-79337779&id=456247668&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E12`,
+          title: `Серия ${12}`,
+          description: `Сезон ${6}, серия ${12}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-127180283&id=456241128&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E13`,
+          title: `Серия ${13}`,
+          description: `Сезон ${6}, серия ${13}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-219966194&id=456239262&hd=3`,
+          isWatched: false,
+        },
+        {
+          id: `S6E14`,
+          title: `Серия ${14}`,
+          description: `Сезон ${6}, серия ${14}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-225933603&id=456239145&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E15`,
+          title: `Серия ${15}`,
+          description: `Сезон ${6}, серия ${15}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239133&hd=4`,
+          isWatched: false,
+        },
+        {
+          id: `S6E16`,
+          title: `Серия ${16}`,
+          description: `Сезон ${6}, серия ${16}`,
+          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-227638262&id=456239134&hd=4`,
           isWatched: false,
         },
       ],
@@ -432,31 +527,6 @@ export const seriesData = [
     season7: {
       seasonNumber: 7,
       episodeCount: 10,
-      episodes: [
-        {
-          id: `1`,
-          title: `Серия ${1}`,
-          description: `Сезон ${1}, серия ${1}`,
-          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-194455959&id=456241710&hd=4`,
-
-          rutubeUrl: ``,
-          isWatched: false,
-        },
-
-        {
-          id: `2`,
-          title: `Серия ${2}`,
-          description: `Сезон ${1}, серия ${2}`,
-          vkUrl: `https://vkvideo.ru/video_ext.php?oid=-80669546&id=456256152&hd=3`,
-
-          rutubeUrl: ``,
-          isWatched: false,
-        },
-      ],
-    },
-    season8: {
-      seasonNumber: 8,
-      episodeCount: 8,
       episodes: [
         {
           id: `1`,

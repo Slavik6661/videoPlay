@@ -128,28 +128,28 @@ const SeriesPage = ({ seriesId, onBackHome }) => {
         )
       : 0;
 
-  if (!series) {
-    return (
-      <main className="container-app pb-12 px-4">
-        <BackButton onClick={onBackHome} />
-        <p className="text-white text-lg">Сериал не найден.</p>
-      </main>
-    );
-  }
+  // if (!series) {
+  //   return (
+  //     <main className="container-app pb-12 px-4">
+  //       <BackButton onClick={onBackHome} />
+  //       <p className="text-white text-lg">Сериал не найден.</p>
+  //     </main>
+  //   );
+  // }
 
   return (
     <main className="container-app pb-12 px-4">
       <BackButton onClick={onBackHome} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white">{series.name}</h1>
+        <h1 className="text-3xl font-bold text-white">{series?.name}</h1>
       </div>
 
       <div className="flex flex-col md:flex-row items-start xl:items-start md:items-start gap-6 mb-8">
         <div>
           <img
-            src={seasons[selectedSeason - 1].img}
-            alt={series.name}
+            src={seasons[selectedSeason - 1]?.img}
+            alt={series?.name}
             className="rounded-md min-w-[300px] h-[500px] object-cover object-top shadow-lg"
           />
         </div>
